@@ -1,10 +1,10 @@
 import axios from "axios";
 import useSWR from "swr";
 
-const uri = 'https://data.kingcounty.gov/resource/f29f-zza5.json'; 
+const uri = 'https://data.kingcounty.gov/resource/f29f-zza5.json?$limit=20'; 
 
 const fetcher = async (uri: string) => await axios.get(uri, { data: { 
-    "$limit": 100,
+    "$limit": 20,
     "$$app_token": process.env.API_TOKEN
     }
 });

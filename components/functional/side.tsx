@@ -1,15 +1,13 @@
-import { useEffect, useState } from 'react';
+import { Dispatch, SetStateAction } from 'react';
 import styles from '../../styles/Home.module.css'
-import { getRestaurants } from '../../utilities/swr/fetch';
 
-const SideBar = () => {
-    const [mounted, setMounted] = useState(false)
-    const [rName, setRName] = useState('');
-    const { data, isLoading, isError } = getRestaurants(mounted);
+interface Props {
+    rName: string;
+    isLoading: boolean;
+    setRName: Dispatch<SetStateAction<string>>
+}
 
-    useEffect(() => {
-        setMounted(true);
-    }, [])
+const SideBar = ({ rName, isLoading, setRName }: Props) => {
 
     const submitName = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();

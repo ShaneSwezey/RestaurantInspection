@@ -137,7 +137,7 @@
   height: 100%;
   width: 200px;
   background-color: lightblue;
-  position: absolute;
+  position: fixed;
 }
 
 .sideBar form {
@@ -150,6 +150,10 @@
 
 .sideBar label {
   display: block;
+}
+
+.main {
+  margin-left: 200px;
 }
 
 @media (max-width: 600px) {
@@ -167,5 +171,10 @@
 
   .sideBar input {
     margin-right: 1rem;
+  }
+
+  .main {
+    margin-top: 80px;
+    margin-left: 0px;
   }
 }
