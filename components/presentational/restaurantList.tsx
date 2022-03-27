@@ -8,7 +8,7 @@ interface Props {
 }
 
 // Placeholder name, will rename
-const Main = ({ restaurantList }: Props) => {
+const RestaurantList = ({ restaurantList }: Props) => {
     return (
         <div className={styles.main}>
             <h3>Restaurants</h3>
@@ -24,4 +24,4 @@ const Main = ({ restaurantList }: Props) => {
     );
 }
 
-export default Main;
+export default RestaurantList;

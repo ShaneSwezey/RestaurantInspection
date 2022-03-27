@@ -4,14 +4,15 @@ import styles from '../../styles/Home.module.css'
 interface Props {
     restaurantName: string;
     isLoading: boolean;
-    setRestaurantName: Dispatch<SetStateAction<string>>
+    setRestaurantName: Dispatch<SetStateAction<string>>;
+    onSubmit: () => void;
 }
 
-const SideBar = ({ restaurantName, isLoading, setRestaurantName }: Props) => {
+const SideBar = ({ restaurantName, isLoading, setRestaurantName, onSubmit }: Props) => {
 
     const submitName = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        // placeholder
+        onSubmit();
     }
 
     return (
