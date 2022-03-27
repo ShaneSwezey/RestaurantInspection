@@ -115,7 +115,6 @@
   }
 } */
 
-
 .nav {
   padding: 1rem;
   border-width: 1rem;
@@ -137,7 +136,7 @@
   height: 100%;
   width: 200px;
   background-color: lightblue;
-  position: fixed;
+  position: absolute;
 }
 
 .sideBar form {
@@ -154,6 +153,39 @@
 
 .main {
   margin-left: 200px;
+}
+
+.main h1 {
+  margin-left: 2rem;
+}
+
+.restaurantList {
+  list-style-type: none;
+}
+
+.restaurantTitle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.restaurantTitle:hover {
+  background-color: lightgray;
+}
+
+.restaurantTitleText {
+  margin-left: 10px;;
+}
+
+.restaurantData {
+}
+
+.restaurantInfo {
+  margin-left: .75rem;
 }
 
 @media (max-width: 600px) {
@@ -176,5 +208,9 @@
   .main {
     margin-top: 80px;
     margin-left: 0px;
+  }
+
+  .restaurantList li {
+    width: 20rem;
   }
 }

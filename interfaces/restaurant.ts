@@ -17,6 +17,9 @@ export interface RestaurantInspection {
     name: string;
     phone: string;
     program_identifier: string;
-    violation_points: string;
+    violation_description?: string;
+    violation_points?: string;
+    violation_record_id?: string;
+    violation_type?: string;
     zip_code: string;
 }

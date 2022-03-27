@@ -2,17 +2,16 @@ import { Dispatch, SetStateAction } from 'react';
 import styles from '../../styles/Home.module.css'
 
 interface Props {
-    rName: string;
+    restaurantName: string;
     isLoading: boolean;
-    setRName: Dispatch<SetStateAction<string>>
+    setRestaurantName: Dispatch<SetStateAction<string>>
 }
 
-const SideBar = ({ rName, isLoading, setRName }: Props) => {
+const SideBar = ({ restaurantName, isLoading, setRestaurantName }: Props) => {
 
     const submitName = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         // placeholder
-        console.log('name:', rName);
     }
 
     return (
@@ -20,15 +19,16 @@ const SideBar = ({ rName, isLoading, setRName }: Props) => {
             <h3>Search</h3>
             <form onSubmit={submitName}>
                 <label
-                    htmlFor='restaurant-name'
+                    htmlFor='restaurantName'
                 >
                     Restaurant name
                 </label>
                 <input
-                    name='restaurant-name'
+                    name='restaurantName'
+                    id='restaurantName'
                     type='text'
-                    value={rName}
-                    onChange={e => setRName(e.target.value)}
+                    value={restaurantName}
+                    onChange={e => setRestaurantName(e.target.value)}
                 />
                 <input
                     type='submit'

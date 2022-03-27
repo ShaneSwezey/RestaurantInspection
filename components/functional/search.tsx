@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import { getRestaurants } from '../../utilities/swr/fetch';
-import SideBar from "./side";
+import { getRestaurants } from '../../utilities/swr/axios';
+import SideBar from "./sidebar";
 import Main from "../presentational/main";
 
 
 const Search = () => {
     const [mounted, setMounted] = useState(false)
-    const [rName, setRName] = useState('');
+    const [restaurantName, setRestaurantName] = useState('');
     const { data, isLoading, isError } = getRestaurants(mounted);
 
     useEffect(() => {
@@ -16,12 +16,12 @@ const Search = () => {
     return (
         <>
             <SideBar 
-                rName={rName}
+                restaurantName={restaurantName}
                 isLoading={isLoading}
-                setRName={setRName}
+                setRestaurantName={setRestaurantName}
             />
             <Main 
-                data={data?.data}
+                restaurantList={data?.data}
             />
         </>
     );
