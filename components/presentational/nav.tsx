@@ -2,7 +2,7 @@ import styles from '../../styles/Home.module.css';
 
 const Nav = () => (
     <div className={styles.nav}>
-        <p>King County Food Inspection Data</p>
+        <h2>King County Food Inspection Data</h2>
     </div>
 )
 

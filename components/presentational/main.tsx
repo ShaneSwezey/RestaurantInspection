@@ -11,7 +11,7 @@ interface Props {
 const Main = ({ restaurantList }: Props) => {
     return (
         <div className={styles.main}>
-            <h1>Restaurants</h1>
+            <h3>Restaurants</h3>
             {
                 Array.from(groupRestaurantByAddress(restaurantList).values()).map((restaurant, index) => (
                     <RestaurantContent 

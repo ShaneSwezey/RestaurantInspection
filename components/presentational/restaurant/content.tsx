@@ -23,7 +23,9 @@ const RestaurantContent = ({ restaurant }: Props) => {
             {
                 isActive &&
                     <div className={styles.restaurantData}>
-                        <table>
+                        <table
+                            className={styles.restaurantTable}
+                        >
                             <thead>
                                 <tr>
                                     <th>Inspection Date</th>
@@ -34,7 +36,10 @@ const RestaurantContent = ({ restaurant }: Props) => {
                             <tbody>
                                 {
                                     restaurant.map((element, index) => (
-                                        <tr key={index}>
+                                        <tr 
+                                            key={index}
+                                            className={styles.restaurantRow}
+                                        >
                                             <td>{new Date(element.inspection_date).toLocaleDateString()}</td>
                                             <td>{element.inspection_result}</td>
                                             <td>{element.violation_description ? element.violation_description : 'n/a'}</td>
